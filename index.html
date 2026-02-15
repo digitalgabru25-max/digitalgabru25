@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pardeep Singh | Luxury Web Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0F0F0F;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+background:linear-gradient(45deg,#C6A75E,#FFD700,#C6A75E);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 3s linear infinite;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#C6A75E;
+}
+
+/* HERO */
+.hero{
+position:relative;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+z-index:-1;
+}
+
+.gold-text{
+font-size:60px;
+font-weight:800;
+background:linear-gradient(45deg,#C6A75E,#FFD700,#C6A75E);
+background-size:200% auto;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 3s linear infinite;
+}
+
+@keyframes shine{
+to{background-position:200% center;}
+}
+
+.hero p{
+margin-top:20px;
+font-size:20px;
+}
+
+.btn{
+margin-top:30px;
+padding:12px 35px;
+border:none;
+border-radius:30px;
+background:#C6A75E;
+color:black;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:white;
+transform:scale(1.05);
+}
+
+/* PARTICLES */
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-3;
+}
+
+/* SECTIONS */
+section{
+padding:120px 8%;
+}
+
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+padding:40px;
+border-radius:25px;
+opacity:0;
+transform:translateY(50px);
+transition:0.6s ease;
+}
+
+.glass.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+overflow:hidden;
+transition:0.4s;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+.card-content{
+padding:20px;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border:1px solid #C6A75E;
+}
+
+.price{
+font-size:28px;
+margin:15px 0;
+color:#C6A75E;
+}
+
+footer{
+background:#111;
+padding:40px;
+text-align:center;
+margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<header>
+<div class="logo">Pardeep Singh</div>
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-working-on-a-laptop-1573/1080p.mp4" type="video/mp4">
+</video>
+<div>
+<h1 class="gold-text">I Build Premium Websites That Convert</h1>
+<p>Helping Businesses Grow Online with Modern & Luxury Web Design</p>
+<button class="btn" onclick="location.href='#contact'">Hire Me</button>
+</div>
+</section>
+
+<section id="about">
+<div class="glass">
+<h2 style="text-align:center;">About Me</h2>
+
+<div class="about-container">
+
+<div class="about-img">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1000" alt="Pardeep Singh">
+</div>
+
+<div class="about-content">
+<p>
+I am <strong style="color:#C6A75E;">Pardeep Singh</strong>, a Website Developer & Digital Creator from India.
+I specialize in creating modern, luxury and high-converting websites that help businesses grow online.
+</p>
+
+<p>
+My focus is on premium UI design, smooth animations, fast performance, and SEO optimization.
+I build websites that look like ₹1 Lakh agency projects — at affordable pricing.
+</p>
+
+<ul style="line-height:2;">
+<li>✔ Fast Delivery</li>
+<li>✔ Mobile Responsive</li>
+<li>✔ SEO Optimized</li>
+<li>✔ Luxury Design Experience</li>
+</ul>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="glass">
+<h2>Premium Services</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1200">
+<div class="card-content">
+<h3>Website Design</h3>
+<p>Modern responsive luxury websites.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1200">
+<div class="card-content">
+<h3>Cafe Website</h3>
+<p>Elegant restaurant & cafe design.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200">
+<div class="card-content">
+<h3>E-commerce Store</h3>
+<p>Premium online store solutions.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<div class="glass">
+<h2>Featured Projects</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=1200">
+<div class="card-content">
+<h3>Luxury Cafe Project</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200">
+<div class="card-content">
+<h3>Corporate Business Website</h3>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200">
+<div class="card-content">
+<h3>Startup Landing Page</h3>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="pricing">
+<div class="glass">
+<h2>Pricing Plans</h2>
+<div class="grid">
+
+<div class="card">
+<div class="card-content">
+<h3>Basic</h3>
+<div class="price">₹4,999</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Business</h3>
+<div class="price">₹9,999</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Premium</h3>
+<div class="price">₹19,999</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="glass">
+<h2>Let’s Build Your Dream Website</h2>
+<p>📞 +91 8360552292</p>
+<p>📧 digitalgabru25@gmail.com</p>
+</div>
+</section>
+
+<footer>
+© 2026 Pardeep Singh | Luxury Web Developer
+</footer>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js",{
+particles:{
+number:{value:80},
+color:{value:"#C6A75E"},
+shape:{type:"circle"},
+opacity:{value:0.5},
+size:{value:3},
+move:{enable:true,speed:2}
+}
+});
+
+const reveals=document.querySelectorAll(".glass");
+window.addEventListener("scroll",()=>{
+reveals.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add("show");
+}
+});
+});
+</script>
+
+</body>
+</html>
